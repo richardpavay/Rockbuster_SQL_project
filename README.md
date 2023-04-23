@@ -10,4 +10,4 @@ For the schema and metadata of the database and its columns, please refer to the
 This projects countains:
   1. A data dictionary, intended to help navigating and understading the database
   2. SQL (Postgres) Queries
-  3. Visualizations presenting the results, and key insights gained from the analysis
+  3. A Power Point Slideshow with Visualizations presenting the results, and key insights gained from the analysis
