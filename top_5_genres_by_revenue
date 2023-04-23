@@ -1,0 +1,16 @@
+/* Retrieving top 5 genres by revenue */
+SELECT
+  C.name AS category,
+  SUM(amount) AS revenue
+FROM
+  film A
+INNER JOIN film_category B ON A.film_id = B.film_id
+INNER JOIN category C ON B.category_id = C.category_id
+INNER JOIN inventory D ON A.film_id = D.film_id
+INNER JOIN rental E ON D.inventory_id = E.inventory_id
+INNER JOIN payment F ON E.rental_id = F.rental_id
+GROUP BY
+  category
+ORDER BY
+  revenue DESC
+ LIMIT 5
